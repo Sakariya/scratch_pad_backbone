@@ -24,8 +24,8 @@ gem 'jbuilder', '~> 2.5'
 # Use jquery as javascript library
 gem 'jquery-rails'
 
-gem 'backbone-on-rails'
-gem 'lodash-rails'
+gem 'backbone-on-rails', '~> 1.1.0.0'
+gem 'lodash-rails', '~> 2.2.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

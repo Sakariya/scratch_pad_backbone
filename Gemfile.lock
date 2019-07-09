@@ -47,11 +47,11 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    backbone-on-rails (1.2.0.0)
+    backbone-on-rails (1.1.0.0)
       eco
       ejs
       jquery-rails
-      railties
+      rails (>= 3.1)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -103,7 +103,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    lodash-rails (4.17.11)
+    lodash-rails (2.2.1)
       railties (>= 3.1)
     loofah (2.2.3)
       crass (~> 1.0.2)
@@ -205,7 +205,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  backbone-on-rails
+  backbone-on-rails (~> 1.1.0.0)
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
@@ -214,7 +214,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
-  lodash-rails
+  lodash-rails (~> 2.2.1)
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
