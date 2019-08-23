@@ -1,24 +1,31 @@
 class NotesController < ApplicationController
   helper_method :notes, :note
-  respond_to :json, only: [:index, :create, :update, :destroy]
-  respond_to :html, only: [:index]
 
   def index
-    respond_with notes
+    respond_to do |format|
+      format.html {render text: "", layout: true}
+      format.json {render json: notes }
+    end
   end
 
   def create
     note = Note.create(note_params)
-    respond_with note
+    respond_to do |format|
+      format.json {render json: note }
+    end
   end
 
   def update
     note.update_attributes(note_params)
-    respond_with note
+    respond_to do |format|
+      format.json {render json: note }
+    end
   end
 
   def destroy
-    respond_with note.destroy
+    respond_to do |format|
+      format.json {render json: note.destroy }
+    end
   end
 
   private
