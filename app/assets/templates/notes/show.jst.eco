@@ -1,0 +1,10 @@
+<dl>
+  <dt>Title</dt>
+  <dd>
+    <a href="#" class='edit-note'>
+      <%= @note.get('title') %>
+    </a>
+  </dd>
+  <dt>Content</dt>
+  <dd><%= @note.get('content') %></dd>
+</dl>

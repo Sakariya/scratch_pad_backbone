@@ -1,12 +1,4 @@
-<ul>
-  <% notes.each do |note| %>
-    <li>
-      <dl>
-        <dt>Title</dt>
-        <dd><%= link_to note.title, note %></dd>
-        <dt>Content</dt>
-        <dd><%= note.content %></dd>
-      </dl>
-    </li>
-  <% end %>
-</ul>
+<script type="text/javascript">
+  // ScratchPad.AllNotes = new ScratchPad.Collections.Notes(<%= raw notes.to_json %>);
+  ScratchPad.notesJson = <%= raw notes.to_json %>;
+</script>
