@@ -2,6 +2,10 @@ class App.Views.ShowNote extends Backbone.View
   template: JST['notes/show']
   className: 'note'
 
+  initialize: ->
+    @listenTo(@model, 'invalid', @addError)
+    @listenTo(@model, 'error', @addError)
+
   events:
     'change': 'save'
     'keydown .note-title': 'blurIfEnter'
@@ -28,8 +32,12 @@ class App.Views.ShowNote extends Backbone.View
     if e.keyCode == 13
       @$(':input').blur()
 
+  addError: =>
+    @$el.addClass('error')
+
   beginEditing: ->
     @$el.addClass('editing')
+    @$el.removeClass('error')
 
   endEditing: ->
     @$el.removeClass('editing')
