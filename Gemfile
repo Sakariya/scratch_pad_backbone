@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use jquery as javascript library
 gem 'jquery-rails'
+gem 'momentjs-rails', ' ~> 2.4.0'
 
 gem 'backbone-on-rails', '~> 1.1.0.0'
 gem 'lodash-rails', '~> 2.2.1'
