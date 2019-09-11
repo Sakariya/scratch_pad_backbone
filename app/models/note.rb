@@ -1,5 +1,8 @@
 class Note < ApplicationRecord
   validate :ensure_title_or_content
+  belongs_to :body, polymorphic: true
+
+  # delegate :content, to: :body
 
   private
 

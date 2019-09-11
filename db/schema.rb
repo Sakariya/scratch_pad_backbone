@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_055013) do
+ActiveRecord::Schema.define(version: 2019_09_11_085230) do
 
   create_table "notes", force: :cascade do |t|
     t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "body_type"
+    t.integer "body_id"
+    t.index ["body_type", "body_id"], name: "index_notes_on_body_type_and_body_id"
+  end
+
+  create_table "sticky_notes", force: :cascade do |t|
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

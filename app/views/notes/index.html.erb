@@ -1,4 +1,4 @@
 <script type="text/javascript">
   // ScratchPad.AllNotes = new ScratchPad.Collections.Notes(<%= raw notes.to_json %>);
-  ScratchPad.notesJson = <%= raw notes.to_json %>;
+  ScratchPad.notesJson = <%= raw notes.to_json(include: :body) %>;
 </script>
